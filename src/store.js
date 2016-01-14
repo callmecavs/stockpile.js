@@ -1,42 +1,31 @@
-import knot from 'knot.js'
-
 export default (namespace) => {
-  const store = window.localStorage
-  let local = toObject(store.getItem(namespace)) || {}
+  const toString = JSON.stringify
+  const toObject = JSON.parse
 
-  const instance = knot({
+  const store = window.localStorage
+  let cache   = toObject(store.getItem(namespace)) || {}
+
+  return {
     get: get,
     set: set,
     remove: remove,
     clear: clear
-  })
-
-  return instance
-
-  // helpers
-
-  function toObject(input) {
-    return JSON.parse(input)
-  }
-
-  function toString(input) {
-    return JSON.stringify(input)
   }
 
   // API
 
   function get(name) {
-    return local[name] || null
+    return cache[name] || null
   }
 
   function set(name, value) {
-    local[name] = value
-    store.setItem(namespace, toString(local))
+    cache[name] = value
+    store.setItem(namespace, toString(cache))
   }
 
   function remove(name) {
-    delete local[name]
-    store.setItem(namespace, toString(local))
+    delete cache[name]
+    store.setItem(namespace, toString(cache))
   }
 
   function clear() {
