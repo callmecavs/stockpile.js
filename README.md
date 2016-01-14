@@ -2,7 +2,7 @@
 
 [![Stockpile.js on NPM](https://img.shields.io/npm/v/stockpile.js.svg)](https://www.npmjs.com/package/stockpile.js)
 
-A tiny localStorage wrapper, providing namespacing and typed values.
+A tiny localStorage wrapper providing namespacing and typed values.
 
 ## Usage
 
@@ -41,7 +41,7 @@ const storage = stockpile('namespace')
 
 Note that the API mimics the return values of the [Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Storage).
 
-However, whereas the Storage API supports only string values, **Stockpile supports all of JavaScript's [primitive types](https://developer.mozilla.org/en-US/docs/Glossary/Primitive)**.
+However, whereas the Storage API supports only string values, **Stockpile supports getting and setting of all JavaScript's [primitive types](https://developer.mozilla.org/en-US/docs/Glossary/Primitive), as well as Arrays and Objects**.
 
 ### .get(name)
 
