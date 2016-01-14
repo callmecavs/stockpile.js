@@ -1,28 +1,26 @@
 {
   "name":        "stockpile.js",
   "version":     "0.0.1",
-  "description": "",
-  "homepage":    "",
-  "main":        "",
+  "description": "A tiny localStorage wrapper providing namespacing and typed values.",
+  "homepage":    "https://github.com/callmecavs/stockpile.js",
+  "main":        "dist/stockpile.min.js",
 
-  "author":  "",
-  "license": "",
+  "author":  "Michael Cavalea",
+  "license": "MIT",
 
   "repository": {
     "type": "git",
-    "url":  ""
+    "url":  "https://github.com/callmecavs/stockpile.js"
   },
   "bugs": {
-    "url": ""
+    "url": "https://github.com/callmecavs/stockpile.js/issues"
   },
 
   "keywords": [
-
+    "local",
+    "storage",
+    "namespace"
   ],
-
-  "dependencies": {
-    "knot.js": "*"
-  },
 
   "devDependencies": {
     "babel-core":                      "*",
