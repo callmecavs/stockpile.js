@@ -3,7 +3,7 @@ export default (namespace) => {
   const toString = JSON.stringify
 
   const store = window.localStorage
-  let cache   = toObject(store.getItem(namespace)) || {}
+  const cache = toObject(store.getItem(namespace)) || {}
 
   return {
     get: get,
