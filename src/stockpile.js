@@ -12,6 +12,12 @@ export default (namespace) => {
     clear: clear
   }
 
+  // helpers
+
+  function update() {
+    store.setItem(namespace, toString(cache))
+  }
+
   // API
 
   function get(name) {
@@ -20,12 +26,12 @@ export default (namespace) => {
 
   function set(name, value) {
     cache[name] = value
-    store.setItem(namespace, toString(cache))
+    update()
   }
 
   function remove(name) {
     delete cache[name]
-    store.setItem(namespace, toString(cache))
+    update()
   }
 
   function clear() {
