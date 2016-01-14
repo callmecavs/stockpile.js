@@ -1,6 +1,6 @@
 {
   "name":        "stockpile.js",
-  "version":     "0.0.1",
+  "version":     "1.0.0",
   "description": "A tiny localStorage wrapper providing namespacing and typed values.",
   "homepage":    "https://github.com/callmecavs/stockpile.js",
   "main":        "dist/stockpile.min.js",
