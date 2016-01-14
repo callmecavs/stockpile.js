@@ -1,6 +1,6 @@
 export default (namespace) => {
-  const toString = JSON.stringify
   const toObject = JSON.parse
+  const toString = JSON.stringify
 
   const store = window.localStorage
   let cache   = toObject(store.getItem(namespace)) || {}

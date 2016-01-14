@@ -30,7 +30,7 @@ const onError = function(error) {
 
 const attribution = [
   '/*!',
-  ' * Store.js <%= pkg.version %> - <%= pkg.description %>',
+  ' * Stockpile.js <%= pkg.version %> - <%= pkg.description %>',
   ' * Copyright (c) ' + new Date().getFullYear() + ' <%= pkg.author %> - <%= pkg.homepage %>',
   ' * License: <%= pkg.license %>',
   ' */',
@@ -41,8 +41,8 @@ const attribution = [
 
 const browserifyArgs = {
   debug: true,
-  entries: 'src/store.js',
-  standalone: 'Store',
+  entries: 'src/stockpile.js',
+  standalone: 'Stockpile',
   transform: [
     'babelify'
   ]
@@ -59,7 +59,7 @@ const build = () => {
     .bundle()
     .on('error', onError)
     .on('end', () => console.timeEnd('Bundling finished'))
-    .pipe(source('store.min.js'))
+    .pipe(source('stockpile.min.js'))
     .pipe(buffer())
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(uglify())
