@@ -9,7 +9,8 @@ export default (namespace) => {
     get: get,
     set: set,
     remove: remove,
-    clear: clear
+    clear: clear,
+    exists: exists
   }
 
   // helpers
@@ -37,4 +38,10 @@ export default (namespace) => {
   function clear() {
     store.removeItem(namespace)
   }
+
+  function exists(name) {
+    return !!this.get(name)
+  }
 }
+
+

@@ -79,6 +79,16 @@ Delete the namespace.
 storage.clear()
 ```
 
+### .exists()
+
+Check if exists a collection.
+
+```es6
+storage.exists('name')
+```
+
+return true if exists and false if doesn't exists.
+
 ## License
 
 MIT. © 2016 Michael Cavalea
