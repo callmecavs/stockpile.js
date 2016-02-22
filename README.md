@@ -79,15 +79,15 @@ Delete the namespace.
 storage.clear()
 ```
 
-### .exists()
+### .exists(name)
 
-Check if exists a collection.
+Check if a key/value pair exists in the namespace.
 
 ```es6
 storage.exists('name')
 ```
 
-return true if exists and false if doesn't exists.
+Returns true if it exists, false otherwise.
 
 ## License
 

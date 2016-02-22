@@ -6,11 +6,11 @@ export default (namespace) => {
   const cache = toObject(store.getItem(namespace)) || {}
 
   return {
-    get: get,
-    set: set,
-    remove: remove,
-    clear: clear,
-    exists: exists
+    get,
+    set,
+    remove,
+    clear,
+    exists
   }
 
   // helpers
@@ -40,8 +40,6 @@ export default (namespace) => {
   }
 
   function exists(name) {
-    return !!this.get(name)
+    return get(name) !== null
   }
 }
-
-
