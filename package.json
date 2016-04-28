@@ -1,9 +1,10 @@
 {
   "name":        "stockpile.js",
-  "version":     "1.1.0",
+  "version":     "1.1.1",
   "description": "A tiny localStorage wrapper providing namespacing and typed values.",
   "homepage":    "https://github.com/callmecavs/stockpile.js",
   "main":        "dist/stockpile.min.js",
+  "jsnext:main": "src/stockpile.js",
 
   "author":  "Michael Cavalea",
   "license": "MIT",
