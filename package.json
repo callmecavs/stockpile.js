@@ -1,6 +1,6 @@
 {
   "name":        "stockpile.js",
-  "version":     "1.1.1",
+  "version":     "1.2.0",
   "description": "A tiny localStorage wrapper providing namespacing and typed values.",
   "homepage":    "https://github.com/callmecavs/stockpile.js",
   "main":        "dist/stockpile.min.js",
@@ -24,20 +24,15 @@
   ],
 
   "devDependencies": {
-    "babel-core":                      "*",
-    "babel-preset-es2015":             "*",
-    "babel-plugin-add-module-exports": "*",
-    "babelify":                        "*",
-    "browser-sync":                    "*",
-    "browserify":                      "*",
-    "gulp":                            "*",
-    "gulp-header":                     "*",
-    "gulp-sourcemaps":                 "*",
-    "gulp-uglify":                     "*",
-    "lodash.assign":                   "*",
-    "node-notifier":                   "*",
-    "vinyl-buffer":                    "*",
-    "vinyl-source-stream":             "*",
-    "watchify":                        "*"
+    "babel-preset-es2015-rollup": "*",
+    "browser-sync":               "*",
+    "del":                        "*",
+    "gulp":                       "*",
+    "node-notifier":              "*",
+    "rollup":                     "*",
+    "rollup-plugin-babel":        "*",
+    "rollup-plugin-commonjs":     "*",
+    "rollup-plugin-node-resolve": "*",
+    "rollup-plugin-uglify":       "*"
   }
 }
