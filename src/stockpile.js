@@ -1,4 +1,4 @@
-export default (namespace) => {
+const stockpile = namespace => {
   const toObject = JSON.parse
   const toString = JSON.stringify
 
@@ -15,31 +15,33 @@ export default (namespace) => {
 
   // helpers
 
-  function update() {
+  function update () {
     store.setItem(namespace, toString(cache))
   }
 
   // API
 
-  function get(name) {
+  function get (name) {
     return cache[name] || null
   }
 
-  function set(name, value) {
+  function set (name, value) {
     cache[name] = value
     update()
   }
 
-  function remove(name) {
+  function remove (name) {
     delete cache[name]
     update()
   }
 
-  function clear() {
+  function clear () {
     store.removeItem(namespace)
   }
 
-  function exists(name) {
+  function exists (name) {
     return get(name) !== null
   }
 }
+
+export default stockpile
