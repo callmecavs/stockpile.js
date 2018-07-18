@@ -2,8 +2,30 @@ const stockpile = namespace => {
   const toObject = JSON.parse
   const toString = JSON.stringify
 
-  const store = window.localStorage
-  const cache = toObject(store.getItem(namespace)) || {}
+  const storage = window.localStorage
+  const cache = toObject(storage.getItem(namespace)) || {}
+
+  // helpers
+
+  const save = () => storage.setItem(namespace, toString(cache))
+
+  // API
+
+  const get = key => cache[key] || null
+
+  const set = (key, val) => {
+    cache[key] = val
+    save()
+  }
+
+  const remove = key => {
+    delete cache[key]
+    save()
+  }
+
+  const clear = () => storage.removeItem(namespace)
+
+  const exists = key => get(key) !== null
 
   return {
     get,
@@ -11,36 +33,6 @@ const stockpile = namespace => {
     remove,
     clear,
     exists
-  }
-
-  // helpers
-
-  function update () {
-    store.setItem(namespace, toString(cache))
-  }
-
-  // API
-
-  function get (name) {
-    return cache[name] || null
-  }
-
-  function set (name, value) {
-    cache[name] = value
-    update()
-  }
-
-  function remove (name) {
-    delete cache[name]
-    update()
-  }
-
-  function clear () {
-    store.removeItem(namespace)
-  }
-
-  function exists (name) {
-    return get(name) !== null
   }
 }
 
