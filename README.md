@@ -1,6 +1,6 @@
 # Stockpile.js
 
-[![Stockpile.js on NPM](https://img.shields.io/npm/v/stockpile.js.svg)](https://www.npmjs.com/package/stockpile.js)
+[![Stockpile.js on NPM](https://img.shields.io/npm/v/stockpile.js.svg?style=flat-square)](https://www.npmjs.com/package/stockpile.js) [![Stockpile.js Downloads on NPM](https://img.shields.io/npm/dm/stockpile.js.svg?style=flat-square)](https://www.npmjs.com/package/stockpile.js) [![Standard JavaScript Style](https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square)](http://standardjs.com/)
 
 A tiny localStorage wrapper providing namespacing and typed values.
 
