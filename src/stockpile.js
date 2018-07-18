@@ -5,7 +5,7 @@ const stockpile = namespace => {
   const storage = window.localStorage
   const cache = toObject(storage.getItem(namespace)) || {}
 
-  // helpers
+  // helper
 
   const save = () => storage.setItem(namespace, toString(cache))
 
