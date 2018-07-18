@@ -4,18 +4,33 @@ import resolve from 'rollup-plugin-node-resolve'
 const info = require('./package.json')
 
 const config = {
-  entry: 'src/stockpile.js',
+  input: 'src/stockpile.js',
   plugins: [
     resolve(),
-    babel()
+    babel({
+      babelrc: false,
+      presets: [
+        [
+          '@babel/preset-env', {
+            modules: false,
+            targets: {
+              browsers: ['last 2 versions']
+            }
+          }
+        ]
+      ],
+      plugins: [
+        "@babel/plugin-proposal-object-rest-spread"
+      ]
+    })
   ],
-  targets: [
+  output: [
     {
-      dest: info.main,
+      file: info.main,
       format: 'umd',
-      moduleName: 'Stockpile'
+      name: 'Stockpile'
     }, {
-      dest: info.module,
+      file: info.module,
       format: 'es'
     }
   ]
