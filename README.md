@@ -91,4 +91,4 @@ Returns true if it exists, false otherwise.
 
 ## License
 
-MIT. © 2018 Michael Cavalea
+[MIT](https://opensource.org/licenses/MIT). © 2018 Michael Cavalea
